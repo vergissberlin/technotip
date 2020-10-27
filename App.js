@@ -1,12 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {useState} from 'react';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function App() {
+  const [count, setCount] = useState(0)
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
       <StatusBar style="auto" />
+      <View style={styles.containerUpper}>
+        <Text style={styles.counter}>{count}</Text>
+      </View>
+        <TouchableOpacity activeOpacity={0.52} style={[styles.containerDowner,styles.btnCounter]} onPress={() => {setCount(count + 1)}}>
+            <Text style={styles.btnCounterText}>tap it!</Text>
+        </TouchableOpacity>
     </View>
   );
 }
@@ -14,8 +20,41 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  containerUpper: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    height: '50%',
+    backgroundColor: '#FF4500',
+  },
+  containerDowner: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    height: '50%',
+    backgroundColor: '#7FFFD4',
+  },
+  counter: {
+    color: '#fff',
+    fontSize: 144,
+    fontWeight: 'bold',
+    fontFamily: 'Courier,Monospace'
+  },
+  btnCounter: {
+    height: 100,
+    width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  btnCounterText: {
+    fontSize: 144,
+    fontWeight: 'bold',
+    color: '#fff',
+    padding: 42,
+  }
 });
