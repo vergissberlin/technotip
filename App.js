@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 144,
     fontWeight: 'bold',
-    fontFamily: 'Courier,Monospace'
+    fontFamily: 'Menlo'
   },
   btnCounter: {
     height: 100,
