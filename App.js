@@ -4,13 +4,18 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function App() {
   const [count, setCount] = useState(0)
+  
+  const _add = () => {
+    setCount(count + 1)
+  }
+
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.containerUpper}>
         <Text style={styles.counter}>{count}</Text>
       </View>
-        <TouchableOpacity activeOpacity={0.52} style={[styles.containerDowner,styles.btnCounter]} onPress={() => {setCount(count + 1)}}>
+        <TouchableOpacity activeOpacity={0.52} style={[styles.containerDowner,styles.btnCounter]} onPress={() => {_add()}}>
             <Text style={styles.btnCounterText}>tap it!</Text>
         </TouchableOpacity>
     </View>
@@ -52,9 +57,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   btnCounterText: {
-    fontSize: 144,
+    fontSize: 112,
     fontWeight: 'bold',
     color: '#fff',
-    padding: 42,
   }
 });
