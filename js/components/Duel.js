@@ -1,0 +1,65 @@
+import { StatusBar } from 'expo-status-bar';
+import React, {useState} from 'react';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+
+export default function App() {
+  const [count, setCount] = useState(0)
+  
+  const _add = () => {
+    setCount(count + 1)
+  }
+
+  let couuntUpper = 50
+  let countDowner = 50
+
+  return (
+    <View style={styles.container}>
+      <StatusBar style="auto" />
+      <View style={styles.containerUpper}>
+        <Text style={[styles.counter, styles.containerUpperText]}>{count}</Text>
+      </View>
+      <TouchableOpacity activeOpacity={0.52} style={[styles.containerDowner, {flex: count}]} onPress={() => {_add()}}>
+         <Text style={[styles.counter]}>{count}</Text>
+         <Text style={styles.btnCounterText}>tap it!</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  containerUpper: {
+    flex: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#FF4500',
+    width: '100%',
+  },
+  containerUpperText: {
+      transform:[  { rotateZ: "180deg" }],
+  },
+  containerDowner: {
+    flex: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#7FFFD4',
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  counter: {
+    color: '#fff',
+    fontSize: 144,
+    fontWeight: 'bold',
+    fontFamily: 'Menlo'
+  },
+  btnCounterText: {
+    fontSize: 112,
+    fontWeight: 'bold',
+    color: '#fff',
+  }
+});
