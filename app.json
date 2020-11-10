@@ -1,10 +1,14 @@
 {
   "expo": {
     "name": "tap!tap!",
+    "description": "The chances are one to one. Try to tap faster than your opponent!",
     "slug": "taptap",
-    "version": "1.0.0",
+    "privacy": "public",
+    "version": "1.2.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "primaryColor": "#FF4500",
+    "backgroundColor": "#7FFFD4",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -17,15 +21,23 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": "The chances are one to one. Try to tap faster than your opponent!",
     "githubUrl": "https://github.com/vergissberlin/tap-tap-",
+    "platforms":["android"],
     "android": {
-      "package": "com.vergissberlin.taptap"
+      "package": "com.vergissberlin.taptap",
+       "permissions": []
+    },
+    "androidStatusBar": {
+      "barStyle": "dark-content",
+      "translucent": true
+    },
+    "androidNavigationBar": {
+      "barStyle": "dark-content"
     }
   }
 }
