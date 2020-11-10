@@ -1,14 +1,16 @@
 import {StatusBar} from 'expo-status-bar';
 import React, {useState} from 'react';
-import {Button, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {Button, StyleSheet, Text, TouchableOpacity, Vibration, View} from 'react-native';
 
 export default function App() {
   const [countUpper, setCountUpper] = useState(50)
   const [countDowner, setCountDowner] = useState(50)
   const winLevel = 10
   const hurryLevel = 23
+  const VIBRATION_DURATION = 200
 
   const _addUpper = () => {
+    _hurryUp()
     if (countDowner > winLevel) {
       setCountUpper(countUpper + 1)
       setCountDowner(countDowner - 1)
@@ -16,9 +18,16 @@ export default function App() {
   }
 
   const _addDowner = () => {
+    _hurryUp()
     if (countUpper > winLevel) {
       setCountUpper(countUpper - 1)
       setCountDowner(countDowner + 1)
+    }
+  }
+
+  const _hurryUp = () => {
+    if (countUpper < hurryLevel || countDowner < hurryLevel) {
+      Vibration.vibrate(VIBRATION_DURATION)
     }
   }
 
