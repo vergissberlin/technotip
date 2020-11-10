@@ -8,7 +8,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#FF4500"
+      "backgroundColor": "#7FFFD4"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -21,6 +21,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "description": "The chances are one to one. Try to tap faster than your opponent!",
+    "githubUrl": "https://github.com/vergissberlin/tap-tap-",
+    "android": {
+      "package": "com.vergissberlin.taptap"
     }
   }
 }
