@@ -4,7 +4,7 @@
     "description": "The chances are one to one. Try to tap faster than your opponent!",
     "slug": "taptap",
     "privacy": "public",
-    "version": "1.4.1",
+    "version": "1.5.0",
     "sdkVersion": "39.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -38,8 +38,7 @@
     "android": {
       "package": "com.vergissberlin.taptap",
       "permissions": [],
-      "versionCode": 4,
-      "enableDangerousExperimentalLeanBuilds": true
+      "versionCode": 5
     },
     "androidStatusBar": {
       "barStyle": "dark-content",
