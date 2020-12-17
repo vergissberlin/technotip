@@ -9,7 +9,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "expo": "~39.0.2",
+    "expo": "~39.0.5",
     "expo-permissions": "~9.3.0",
     "expo-status-bar": "~1.0.2",
     "react": "16.13.1",
